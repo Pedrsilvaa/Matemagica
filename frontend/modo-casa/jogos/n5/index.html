@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Matemágica</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projeto Matemágica" />
+    <meta name="author" content="StepMath" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../images/logo menor.png"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="theme-color" content="#FBB448" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Página  -->
+    <link rel="stylesheet" type="text/css" href="../../../primary.css" />
+    <link rel="stylesheet" type="text/css" href="../../../items.css" />
+    <link rel="stylesheet" type="text/css" href="../stylem1.css" />
+  </head>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <body>
+    <header>
+      <div class="hd1">
+        <a href="../../menu/">
+          <iconify-icon icon="pajamas:close" class="icon-close"></iconify-icon
+        ></a>
+        <div class="progress-bar">
+          <div class="progress-bar-fill"></div>
+        </div>
+        <div class="lifes">
+          <img src="../../../images/coracao.png" alt="coracao" />
+          <span id="vidas">3</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <link rel="stylesheet" href="../stylem2.css">
+        <div class="md1">
+  <h3>Responda ao Dr Charada:</h3>
+</div>
+<div class="md2">
+  <div class="boxenun">
+    <img
+      src="../../../images/minigames/olho.gif"
+      alt="Dr Charada"
+    />
+    <h3>Se juntos nós temos 4 olhos, cada um com 2 olhos, quantos olhos haveriam se estivessemos em 10 pessoas ao todo?</h3>
+
+  </div>
+  <div class="boxresp">
+    <div class="card-block">
+      <div class="card-game">
+         22
+      </div>
+      <div class="card-game">
+         24
+      </div>
+    </div>
+    <div class="card-block">
+      <div class="card-game">
+         16
+      </div>
+      <div class="card-game">
+        20
+      </div>
+    </div>
+  </div>
+</div>
+<div class="md3">
+  <button class="btn-purple">verificar</button>
+</div>
+    </main>
+    <script>
+      const header = document.querySelector("header");
+      const main = document.querySelector("main");
+
+      function adjustMainHeight() {
+        const headerHeight = header.getBoundingClientRect().height;
+        const windowHeight = window.innerHeight;
+        const svh = windowHeight * 0.01;
+        main.style.height = `${100 * svh - headerHeight}px`;
+      }
+
+      window.addEventListener("load", adjustMainHeight);
+      window.addEventListener("resize", adjustMainHeight);
+    </script>
+    <script type="module" src="../js/n5.js"></script>
+  </body>
+</html>

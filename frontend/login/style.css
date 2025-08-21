@@ -1,0 +1,101 @@
+div a {
+  text-decoration: none;
+  color: inherit;
+}
+
+form {
+  height: 100%;
+  margin: 2vh auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  width: 80vw;
+  max-width: 490px;
+}
+
+form h2 {
+  font-weight: 900;
+  font-size: clamp(1rem, -0.25rem + 4vw, 2rem);
+  margin-block: 1vh;
+}
+
+form input {
+  border-radius: 20px;
+  border: 3px solid var(--light-gray);
+  font-size: clamp(1rem, -0.0938rem + 3.5vw, 1.875rem);
+  padding: 2px 15px;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+form input::placeholder {
+  color: #797979;
+  font-weight: 700;
+  font-size: clamp(1rem, -0.0938rem + 3.5vw, 1.875rem);
+}
+form input:focus {
+  border-color: #101010;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #fff inset;
+}
+
+form a {
+  color: var(--hard-purple);
+  font-weight: 700;
+  font-size: clamp(1rem, -0.0938rem + 3.5vw, 1.875rem);
+  text-decoration: none;
+}
+form a:hover {
+  color: var(--dark-purple);
+  transition: all 0.35s;
+  transform: scale(1.05);
+}
+
+form > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+form > div span {
+  font-weight: 700;
+  font-size: clamp(1rem, -0.0938rem + 3.5vw, 1.875rem);
+}
+
+.btn-purple {
+  padding-block: 6px;
+}
+
+.line {
+  width: 95%;
+  height: 4px;
+  background-color: var(--line-gray);
+  border-radius: 5px;
+}
+@media screen and (max-width: 767px) {
+  .line {
+    height: 2px;
+  }
+}
+
+/* .button-google {
+  background-color: white;
+  border: 5px solid var(--light-gray) !important;
+  border-radius: 20px;
+  font-size: 37px;
+  padding: 6px 25px;
+  color: var(--text-black);
+  border: none;
+  width: 100%;
+  font-weight: 700;
+}
+
+.button-google span {
+  margin-right: -9px;
+} */

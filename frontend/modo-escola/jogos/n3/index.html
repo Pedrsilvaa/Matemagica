@@ -1,0 +1,147 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <title>Matemágica</title>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Projeto Matemágica" />
+      <meta name="author" content="StepMath" />
+
+      <link
+        rel="icon"
+        type="image/x-icon"
+        href="../../../images/logo menor.png"
+      />
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+      <meta name="theme-color" content="#FBB448" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet"
+      />
+
+      <!-- CSS Página  -->
+      <link rel="stylesheet" type="text/css" href="../../../primary.css" />
+      <link rel="stylesheet" type="text/css" href="../../../items.css" />
+      <link rel="stylesheet" type="text/css" href="../stylem4.css" />
+      <link rel="stylesheet" type="text/css" href="../board.css">
+    </head>
+
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+    <body>
+      <header>
+        <div class="hd1">
+          <a href="../../menu/">
+            <iconify-icon icon="pajamas:close" class="icon-close"></iconify-icon
+          ></a>
+          <div class="progress-bar">
+            <div class="progress-bar-fill"></div>
+          </div>
+          <div class="lifes">
+            <img 
+              src="../../../images/coracao.png"
+              alt="coracao"
+            />
+            <span id="vidas">3</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="md1">
+          <!-- <h3>Frase motivadora</h3> -->
+          <h3>Nosso amigo Marco precisa fazer algumas continhas:</h3>
+        </div>
+        <div class="md2">
+          <div class="boxenun">
+            <!-- <img
+              src="../../../frontend/images/minigames/test_image.png"
+              alt="test_image"
+            /> -->
+            <img id="openBtn"
+              src="../../../images/minigames/ovelha1.png"
+              alt="ovelha"
+            />
+            <!-- <h3>Enunciado da fase</h3> -->
+            <h3>
+              Essas ovelhas estão me atrapalhando a fazer minhas contas, você pode fazê-las para mim? Use a lousa se precisar
+            </h3>
+          </div>
+          <div class="boxresp">
+            <div id="numbers" class="card-adjust">
+              <div class="card-box">
+                <div class="card-game">
+                  <!-- A -->
+                  11+3
+                </div>
+                <div class="card-game">
+                  <!-- B -->
+                  5×2
+                </div>
+              </div>
+              <div class="card-box">
+                <div class="card-game">
+                  <!-- C -->
+                  30-14
+                </div>
+                <div class="card-game">
+                  <!-- D -->
+                  4×3
+                </div>
+              </div>
+            </div>
+            <div id="units" class="card-adjust">
+              <div class="card-box">
+                <div class="card-game">
+                  <!-- a -->
+                  12
+                </div>
+                <div class="card-game">
+                  <!-- b -->
+                  14
+                </div>
+              </div>
+              <div class="card-box">
+                <div class="card-game">
+                  <!-- c -->
+                  16
+                </div>
+                <div class="card-game">
+                  <!-- d -->
+                  10
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md3">
+          <button class="btn-purple">verificar</button>
+           <div id="popup" class="popup">
+             <div class="popup-content">
+               
+               <button id="closeBtn" class="close-btn">X</button>
+               <canvas id="board"></canvas>
+               <button id="clearBtn">Limpar</button>
+             </div>
+           </div>
+        </div>
+      </main>
+      <script>
+        const header = document.querySelector("header");
+        const main = document.querySelector("main");
+
+        function adjustMainHeight() {
+          const headerHeight = header.getBoundingClientRect().height;
+          const windowHeight = window.innerHeight;
+          main.style.height = `${windowHeight - headerHeight}px`;
+        }
+        window.addEventListener("load", adjustMainHeight);
+        window.addEventListener("resize", adjustMainHeight);
+      </script>
+      <script type="module" src="../js/n3.js"></script>
+    </body>
+  </html>

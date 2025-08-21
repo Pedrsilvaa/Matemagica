@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Avatar - Matemágica</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projeto Matemágica" />
+    <meta name="author" content="StepMath" />
+
+    <link rel="icon" type="image/x-icon" href="../../images/logo menor.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="theme-color" content="#FBB448" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--AuthGuard-->
+    <script src="../../services/authGuard.js"></script>
+    <!-- CSS Página  -->
+    <link rel="stylesheet" type="text/css" href="../../primary.css" />
+    <link rel="stylesheet" type="text/css" href="../../items.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <body>
+    <header>
+      <div class="hd1">
+        <a href="../../modo-casa/perfil/index.html" class="a-perfil">
+          <img id="fotoperfil" src="../../images/carinhas/6.png" alt="6" />
+          <h2 id="username">Usuario<span class="span-perfil">Nível 1</span></h2>
+        </a>
+        <div class="hd2">
+          <a href="../../modo-casa/perfil/" class="a-yellow">VOLTAR</a>
+          <a href="../../configuracao/" class="gear"
+            ><iconify-icon icon="ph:gear" class="icon-gear"></iconify-icon
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="md1">
+        <h2>Escolha seu avatar</h2>
+        <div class="md1d1">
+          <div id="carinhas">
+            <img
+              class="1"
+              src="../../images/carinhas/1.png"
+              alt="oculos-de-sol"
+            />
+            <img
+              class="2"
+              src="../../images/carinhas/2.png"
+              alt="inteligente"
+            />
+            <img class="3" src="../../images/carinhas/3.png" alt="formado" />
+            <img
+              class="4"
+              src="../../images/carinhas/4.png"
+              alt="oculos-escuros"
+            />
+          </div>
+          <div id="carinhas1">
+            <img
+              class="5"
+              src="../../images/carinhas/5.png"
+              alt="inteligente"
+            />
+            <img class="6" src="../../images/carinhas/6.png" alt="nerd" />
+            <img class="7" src="../../images/carinhas/7.png" alt="pensando" />
+            <img class="8" src="../../images/carinhas/8.png" alt="feliz" />
+          </div>
+        </div>
+        <button id="selectFoto" class="btn-purple">Pronto!</button>
+      </div>
+    </main>
+    <script type="module" src="indexAvatar.js"></script>
+    <script>
+      const hd1 = document.querySelector(".hd1");
+      function hd1Size() {
+        if (hd1.offsetWidth < 330) {
+          hd1.style.display = "flex";
+          hd1.style.flexDirection = "column";
+          hd1.style.justifyContent = "center";
+          hd1.style.gap = "1vh";
+        } else {
+          hd1.style.display = "";
+          hd1.style.flexDirection = "row";
+          hd1.style.justifyContent = "";
+        }
+      }
+
+      function handleResize() {
+        hd1Size();
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+    </script>
+  </body>
+</html>

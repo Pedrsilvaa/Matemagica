@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Matemágica</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projeto Matemágica" />
+    <meta name="author" content="StepMath" />
+
+    <link rel="icon" type="image/x-icon" href="../images/logo menor.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="theme-color" content="#FBB448" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Página  -->
+    <link rel="stylesheet" type="text/css" href="../primary.css" />
+    <link rel="stylesheet" type="text/css" href="../items.css" />
+    <link rel="stylesheet" type="text/css" href="../alterar-codigo/style.css" />
+  </head>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <body>
+    <header>
+      <div class="hd1">
+        <a href="#" onclick="history.back()">
+          <iconify-icon icon="pajamas:close" class="icon-close"></iconify-icon>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <form>
+        <div class="f1">
+          <h2>Enviamos um código de alteração <br />para o seu e-mail</h2>
+          <span id="legenda"
+            >Para redefinir a sua senha, insira o código enviado<br />
+            no e-mail:
+          </span>
+        </div>
+        <div class="f2">
+          <input type="number" id="codigo" placeholder="Código" />
+          <input type="password" id="senha" placeholder="Nova senha" value="" />
+          <input
+            type="password"
+            id="confsenha"
+            placeholder="Confirme a senha"
+            value=""
+          />
+          <button class="btn-purple" id="btn-purple">Enviar</button>
+          <p id="aviso" style="color: red"></p>
+        </div>
+      </form>
+    </main>
+    <script type="module" src="codeUser.js"></script>
+  </body>
+</html>

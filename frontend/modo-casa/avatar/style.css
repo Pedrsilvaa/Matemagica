@@ -1,0 +1,135 @@
+/* Header */
+.hd1 {
+  padding: 1vh 10vw;
+}
+.hd1 > a > img {
+  width: auto;
+}
+.hd1 h2 {
+  font-size: clamp(1rem, 0.0625rem + 3vw, 1.75rem);
+}
+.hd2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6vw;
+}
+.a-yellow {
+  padding: 0;
+}
+.gear {
+  display: flex;
+  align-items: center;
+}
+
+.button-purple {
+  background-color: var(--hard-purple);
+  border-radius: 80px;
+  font-size: 40px;
+  padding: 5px 70px;
+  color: white;
+  border: none;
+  font-weight: 900;
+  margin: 7rem auto 1rem auto;
+  font-family: "Nunito";
+}
+
+.button-purple:hover {
+  transform: scale(1.1);
+  transition: 250ms;
+  cursor: pointer;
+}
+
+main {
+  max-height: 100vh;
+}
+
+.md1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.md1 h2 {
+  font-size: clamp(1rem, -0.875rem + 6vw, 2.5rem);
+  font-weight: bolder;
+  margin-block: 2vh;
+  color: var(--medium-gray);
+}
+
+.md1d1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.md1d1 div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.md1d1 div img {
+  margin: 1.5vw;
+  width: 10vw;
+  height: auto;
+  cursor: pointer;
+  opacity: 1;
+}
+.md1d1:hover div img {
+  opacity: 0.75;
+  transition: all 0.35s;
+}
+.md1d1 div img:hover {
+  transform: scale(1.1);
+  transition: all 0.35s;
+  opacity: 1;
+  filter: drop-shadow(0px 0px 7px #000);
+}
+
+.btn-purple {
+  width: 25%;
+  margin-block: 2vh;
+  border-radius: 35px;
+}
+
+.contorno {
+  border: 3px dashed #bc4ed8;
+  border-radius: 100%;
+  transition: 300ms;
+}
+
+/* Media Query para Celulares/Paisagem até Laptops */
+@media screen and (max-width: 1080px) {
+  .a-perfil {
+    height: 6vh;
+  }
+  .md1 {
+    width: 90%;
+  }
+  .md1d1 div img {
+    width: 15vw;
+  }
+  .btn-purple {
+    width: 35%;
+  }
+  .md1d1:hover div img {
+    opacity: 0.75;
+    transition: none;
+  }
+  .md1d1 div img:hover {
+    transform: scale(1.2);
+    transition: all 0.35s;
+    opacity: 1;
+    filter: none;
+  }
+}
+
+@media screen and (pointer: none),
+  (pointer: coarse) and (orientation: portrait) and (max-width: 768px) {
+  .a-perfil {
+    height: 4.5vh;
+  }
+}

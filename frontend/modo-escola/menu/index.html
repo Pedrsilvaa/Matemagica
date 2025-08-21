@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Jogos - Matemágica</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Projeto Matemágica" />
+  <meta name="author" content="StepMath" />
+
+  <link rel="icon" type="image/x-icon" href="../../images/logo menor.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+  <meta name="theme-color" content="#FBB448" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- CSS Página  -->
+  <link rel="stylesheet" type="text/css" href="../../primary.css" />
+  <link rel="stylesheet" type="text/css" href="../../items.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- <script type="module" src="../../services/authGuard.js"></script> -->
+</head>
+<script>
+  localStorage.setItem("nosound", "true");
+</script>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+<body>
+  <header>
+    <div class="hd1">
+      <a class="a-perfil">
+        <img src="../../images/carinhas/6.png" id="fotoperfil" alt="6" />
+        <h2 id="nickname">
+          Modo escola
+        </h2>
+      </a>
+      <div class="hd2">
+        <a href="../../" class="a-yellow">INÍCIO</a>
+       
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="md1">
+      <h2>Matemática e lógica:</h2>
+      <!-- <select name="nivelJogo" id="nivelJogo">
+        <option value="BASICO">Básico</option>
+        <option value="MEDIO">Médio</option>
+        <option value="DIFICIL">Difícil</option>
+      </select> -->
+      <div class="custom-select" id="#nivelJogo">
+        <div class="selected-option">Básico</div>
+        <ul class=" options-list">
+          <li class="option" data-value="BASICO">Básico</li>
+          <li class="option" data-value="MEDIO">Médio</li>
+          <li class="option op3" data-value="AVANCADO">Avançado</li>
+        </ul>
+      </div>
+    </div>
+    <section class="section1">
+      <div class="carrousel">
+        <div class="slide" id="slide1">
+          <div class="ccimg">
+            <img src="../../images/banho 2.png" alt="c1" />
+          </div>
+          <div class="ccdesc">
+            <a>Unidade do milhar</a>
+          </div>
+        </div>
+        <div class="slide" id="slide2">
+          <div class="ccimg">
+            <img src="../../images/cao 1.png" alt="c2" />
+          </div>
+          <div class="ccdesc">
+            <a>Números decimais</a>
+            
+          </div>
+        </div>
+        <div class="slide" id="slide3">
+          <div class="ccimg">
+            <img src="../../images/racao-para-animais-de-estimacao 1.png" alt="c3" />
+          </div>
+          <div class="ccdesc">
+            <a>Operações básicas</a>
+            
+          </div>
+        </div>
+            <div class="slide" id="slide4">
+              <div class="ccimg">
+                <img src="../../images/cao 2.png" alt="cao2" />
+              </div>
+              <div class="ccdesc">
+                <a>Aprendendo Divisão</a>
+                
+              </div>
+            </div>
+              <div class="slide" id="slide5">
+                <div class="ccimg">
+                  <img src="../../images/patinha.png" alt="patinha" />
+                </div>
+                <div class="ccdesc">
+                  <a>Aprendendo Multiplicação</a>
+                  
+                </div>
+              </div>
+                  <div class="slide" id="slide6">
+                    <div class="ccimg">
+                      <img src="../../images/cao 3.png" alt="cao3" />
+                    </div>
+                    <div class="ccdesc">
+                      <a>Aritmetica Geral</a>
+                      
+                    </div>
+                  </div>
+    </section>
+    <div class="md3">
+      <!-- <a href="#" class="a-purple">ver mais</a> -->
+    </div>
+  </main>
+  <script type="module" src="index.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("slide1").addEventListener("click", function() {
+        window.location.href = "../jogos/n1/";
+      });
+      document.getElementById("slide2").addEventListener("click", function() {
+        window.location.href = "../jogos/n2/";
+      });
+      document.getElementById("slide3").addEventListener("click", function() {
+        window.location.href = "../jogos/n3/";
+      });
+      document.getElementById("slide4").addEventListener("click", function() {
+        window.location.href = "../jogos/n4/";
+      });
+      document.getElementById("slide5").addEventListener("click", function() {
+        window.location.href = "../jogos/n5/";
+      });
+      document.getElementById("slide6").addEventListener("click", function() {
+        window.location.href = "../jogos/n6/";
+      });
+
+      function ajustarJustifyContent() {
+        const carrousel = document.querySelector(".carrousel");
+        if (carrousel && carrousel.scrollWidth > carrousel.clientWidth) {
+          carrousel.style.justifyContent = "left";
+        } else {
+          carrousel.style.justifyContent = "";
+        }
+      }
+
+      const hd1 = document.querySelector('.hd1');
+      function hd1Size() {
+        if (hd1.offsetWidth < 330) {
+          hd1.style.display = 'flex';
+          hd1.style.flexDirection = 'column';
+          hd1.style.justifyContent = 'center';
+          hd1.style.gap = '1vh';
+        } else {
+          hd1.style.display = '';
+          hd1.style.flexDirection = 'row';
+          hd1.style.justifyContent = '';
+        }
+      }
+
+      const md1 = document.querySelector('.md1');
+      const md1h2 = md1.querySelector('h2');
+      const md1div = md1.querySelector('.selected-option');
+      const md1option = md1.querySelectorAll('.option');
+      function md1Size() {
+        if (md1.offsetWidth < 650) {
+          md1.style.flexDirection = 'column';
+          md1h2.style.textAlign = 'center';
+          md1div.style.padding = '2vw 5vw';
+          md1option.forEach(option => {
+            option.style.padding = '2vw 5vw';
+          });
+        } else {
+          md1.style.flexDirection = 'row';
+          md1h2.style.textAlign = 'initial';
+          md1div.style.padding = '0.5vw 1vw';
+          md1option.forEach(option => {
+            option.style.padding = '0.5vw 1vw';
+          });
+        }
+      }
+
+      function handleResize() {
+        ajustarJustifyContent();
+        hd1Size();
+        md1Size();
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+
+      const customSelect = md1.querySelector('.custom-select');
+      const selectedOption = customSelect.querySelector('.selected-option');
+      const optionsList = customSelect.querySelector('.options-list');
+      selectedOption.textContent = 'Básico';
+      selectedOption.setAttribute('data-value', 'BASICO');
+      selectedOption.addEventListener('click', () => {
+        customSelect.classList.toggle('open');
+      });
+
+      document.querySelectorAll('.option').forEach(option => {
+        option.addEventListener('click', (event) => {
+          selectedOption.textContent = event.target.textContent;
+          selectedOption.setAttribute('data-value', event.target.getAttribute('data-value'));
+          customSelect.classList.remove('open');
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!customSelect.contains(event.target)) {
+          customSelect.classList.remove('open');
+        }
+      });
+    });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide"); // Seleciona todos os slides
+    const customSelect = document.querySelector(".custom-select"); // O container do select
+    const selectedOption = customSelect.querySelector(".selected-option"); // A opção selecionada no dropdown
+    const optionsList = customSelect.querySelector(".options-list"); // A lista de opções
+
+    // Adiciona os níveis às dificuldades
+    slides[0].setAttribute("data-difficulty", "BASICO"); // Slide 1: Básico
+    slides[1].setAttribute("data-difficulty", "BASICO"); // Slide 2: Básico
+    slides[2].setAttribute("data-difficulty", "BASICO"); // Slide 3: Básico
+    slides[3].setAttribute("data-difficulty", "MEDIO");  // Slide 4: Médio
+    slides[4].setAttribute("data-difficulty", "MEDIO");  // Slide 5: Médio
+    slides[5].setAttribute("data-difficulty", "AVANCADO"); // Slide 6: Avançado
+
+    // Função para filtrar os slides conforme a dificuldade
+    function filtrarPorDificuldade(dificuldade) {
+      slides.forEach(slide => {
+        if (slide.getAttribute("data-difficulty") === dificuldade) {
+          slide.style.display = "block"; // Mostra o slide correspondente
+        } else {
+          slide.style.display = "none"; // Esconde o slide que não pertence à dificuldade
+        }
+      });
+    }
+
+    // Adiciona evento ao clicar em uma opção do dropdown
+    optionsList.addEventListener("click", (event) => {
+      const selectedValue = event.target.getAttribute("data-value"); // Pega o valor da dificuldade clicada
+      if (selectedValue) {
+        selectedOption.textContent = event.target.textContent; // Atualiza o texto exibido
+        selectedOption.setAttribute("data-value", selectedValue); // Atualiza o valor
+        filtrarPorDificuldade(selectedValue); // Filtra os slides
+        customSelect.classList.remove("open"); // Fecha o dropdown
+      }
+    });
+
+    // Fecha o dropdown se o clique for fora dele
+    document.addEventListener("click", (event) => {
+      if (!customSelect.contains(event.target)) {
+        customSelect.classList.remove("open");
+      }
+    });
+
+    // Inicializa exibindo apenas os níveis do "Básico"
+    filtrarPorDificuldade("BASICO");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Login - Matemágica</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projeto Matemágica" />
+    <meta name="author" content="StepMath" />
+
+    <link rel="icon" type="image/x-icon" href="../images/logo menor.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="theme-color" content="#FBB448" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Página  -->
+    <link rel="stylesheet" type="text/css" href="../primary.css" />
+    <link rel="stylesheet" type="text/css" href="../items.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <body>
+    <header>
+      <div class="hd1">
+        <a href="../">
+          <iconify-icon icon="pajamas:close" class="icon-close"></iconify-icon
+        ></a>
+        <a href="../cadastro/" class="a-btn-yellow">criar conta</a>
+      </div>
+      <form>
+        <h2>Entrar</h2>
+        <input type="email" id="email" placeholder="E-mail" />
+        <input type="password" id="senha" placeholder="Senha" />
+        <button class="btn-purple" id="button-purple">entrar</button>
+        <div>
+          <div class="line"></div>
+          <span>ou</span>
+          <div class="line"></div>
+        </div>
+        <a href="../alterar-senha/">esqueci minha senha</a>
+        <p style="color: red" id="aviso"></p>
+      </form>
+    </header>
+    <script type="module" src="userLogin.js"></script>
+  </body>
+</html>

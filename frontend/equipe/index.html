@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Matemágica</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projeto Matemágica" />
+    <meta name="author" content="StepMath" />
+
+    <link rel="icon" type="image/x-icon" href="../images/logo menor.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="theme-color" content="#FBB448" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Página  -->
+    <link rel="stylesheet" type="text/css" href="../primary.css" />
+    <link rel="stylesheet" type="text/css" href="../items.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <body>
+    <header>
+      <div class="hd1">
+        <a href="../"><img src="../images/logo1.png" alt="logo" /></a>
+        <a href="../index.html" class="a-yellow">INÍCIO</a>
+      </div>
+      <div class="hd2">
+        <img class="imgslogan2" src="../images/slogan2.png" alt="proposito" />
+        <img class="imgslogan3" src="../images/slogan3.png" alt="slogan3" />
+      </div>
+    </header>
+
+    <main>
+      <section class="section1">
+        <h3>valores</h3>
+        <div class="carrousel">
+          <div class="slide">
+            <img src="../images/CARD1.png" alt="card1" />
+          </div>
+          <div class="slide">
+            <img src="../images/CARD2.png" alt="card2" />
+          </div>
+          <div class="slide">
+            <img src="../images/CARD3.png" alt="card3" />
+          </div>
+        </div>
+      </section>
+      <section class="section2" id="section2">
+        <h3>nossa equipe</h3>
+        <div class="carrousel2">
+          <div class="slide2">
+            <img src="../images/1.png" alt="1" />
+          </div>
+          <div class="slide2">
+            <img src="../images/2.png" alt="2" />
+          </div>
+          <div class="slide2">
+            <img src="../images/3.png" alt="3" />
+          </div>
+          <div class="slide2">
+            <img src="../images/4.png" alt="4" />
+          </div>
+          <div class="slide2">
+            <img src="../images/5.png" alt="5" />
+          </div>
+        </div>
+      </section>
+      <section class="section3">
+        <h3>se interessou pela nossa marca?</h3>
+        <a
+          href="https://etecspgov.sharepoint.com/:b:/r/sites/Section_3046.A.-.M.406.249.20240/Shared%20Documents/Grupo%201%20-%20StepMath/manual%20de%20identidade%20visual%20stepmath.pdf?csf=1&web=1&e=GXtHZS"
+          class="a-purple"
+        >
+          acesse o nosso guia
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <img src="../images/Group 12.png" alt="Group" />
+      <div class="fd1">
+        <div>
+          <h2>Quem somos</h2>
+          <a href=".">Missão</a>
+          <a href="#section2">Equipe</a>
+          <a href="../agradecimentos/">Agradecimentos</a>
+        </div>
+        <div>
+          <h2>Redes sociais</h2>
+          <a
+            href="https://www.instagram.com/step.math?igsh=MWN2ZzZ6bTF0ZmZwZg%3D%3D"
+            >Instagram</a
+          >
+        </div>
+        <div>
+          <h2>Guia da marca</h2>
+          <a href="../termos-uso/" target="_blank">Termos de uso </a>
+          <a
+            href="https://etecspgov.sharepoint.com/:b:/r/sites/Section_3046.A.-.M.406.249.20240/Shared%20Documents/Grupo%201%20-%20StepMath/manual%20de%20identidade%20visual%20stepmath.pdf?csf=1&web=1&e=GXtHZS"
+            >Identidade visual</a
+          >
+          <a href="../stepmath/">Stepmath</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const carrousel = document.querySelector(".carrousel");
+      const slides = document.querySelectorAll(".slide");
+
+      const moveLeft = () => {
+        carrousel.prepend(carrousel.lastElementChild);
+        updateActiveSlide();
+      };
+
+      const moveRight = () => {
+        carrousel.append(carrousel.firstElementChild);
+        updateActiveSlide();
+      };
+
+      const updateActiveSlide = () => {
+        const carrouselRect = carrousel.getBoundingClientRect();
+        let closestSlide = null;
+        let closestDistance = Infinity;
+
+        slides.forEach((slide) => {
+          const slideRect = slide.getBoundingClientRect();
+          const slideCenter = slideRect.left + slideRect.width / 2;
+          const carrouselCenter = carrouselRect.left + carrouselRect.width / 2;
+          const distance = Math.abs(slideCenter - carrouselCenter);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSlide = slide;
+          }
+        });
+
+        slides.forEach((slide) => slide.classList.remove("active"));
+        if (closestSlide) {
+          closestSlide.classList.add("active");
+        }
+      };
+
+      carrousel.addEventListener("click", (event) => {
+        const clickX = event.clientX;
+        const carrouselRect = carrousel.getBoundingClientRect();
+
+        if (clickX < carrouselRect.width / 2) {
+          moveLeft();
+        } else {
+          moveRight();
+        }
+      });
+
+      updateActiveSlide();
+    </script>
+    <script>
+      const carrousel2Container = document.querySelector(".carrousel2");
+      const slides2List = Array.from(document.querySelectorAll(".slide2"));
+
+      const moveLeftCarrousel2 = () => {
+        carrousel2Container.prepend(carrousel2Container.lastElementChild);
+        updateActiveSlideCarrousel2();
+      };
+
+      const moveRightCarrousel2 = () => {
+        carrousel2Container.append(carrousel2Container.firstElementChild);
+        updateActiveSlideCarrousel2();
+      };
+
+      const updateActiveSlideCarrousel2 = () => {
+        const slides2 = document.querySelectorAll(".slide2");
+
+        slides2.forEach((slide, index) => {
+          slide.classList.remove("small", "medium", "active");
+
+          if (index === 2) {
+            slide.classList.add("active");
+          } else if (index === 1 || index === 3) {
+            slide.classList.add("medium");
+          } else {
+            slide.classList.add("small");
+          }
+        });
+      };
+
+      carrousel2Container.addEventListener("click", (event) => {
+        const clickX = event.clientX;
+        const carrouselRect = carrousel2Container.getBoundingClientRect();
+
+        if (clickX < carrouselRect.width / 2) {
+          moveLeftCarrousel2();
+        } else {
+          moveRightCarrousel2();
+        }
+      });
+
+      updateActiveSlideCarrousel2();
+    </script>
+    <script>
+      function observeSections() {
+        const sections = document.querySelectorAll(
+          "header, .section1, .section2, .section3, footer"
+        );
+        const body = document.body;
+        const options = {
+          threshold: 0.5,
+        };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (entry.target.tagName === "HEADER") {
+                body.style.backgroundColor = "#fffbff";
+              } else if (entry.target.classList.contains("section1")) {
+                body.style.backgroundColor = "#fffbff";
+              } else if (entry.target.classList.contains("section2")) {
+                body.style.backgroundColor = "#fffbff";
+              } else if (entry.target.classList.contains("section3")) {
+                body.style.backgroundColor = "#fffbff";
+              } else if (entry.target.tagName === "FOOTER") {
+                body.style.backgroundColor = "var(--hard-purple)";
+              }
+            }
+          });
+        }, options);
+
+        sections.forEach((section) => observer.observe(section));
+      }
+      document.addEventListener("DOMContentLoaded", observeSections);
+    </script>
+  </body>
+</html>

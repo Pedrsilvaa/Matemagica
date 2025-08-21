@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Matemágica</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projeto Matemágica" />
+    <meta name="author" content="StepMath" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../images/logo menor.png"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="theme-color" content="#FBB448" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Página  -->
+    <link rel="stylesheet" type="text/css" href="../../../primary.css" />
+    <link rel="stylesheet" type="text/css" href="../../../items.css" />
+    <link rel="stylesheet" type="text/css" href="../stylem1.css" />
+  </head>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <body>
+    <header>
+      <div class="hd1">
+        <a href="../../menu/">
+          <iconify-icon icon="pajamas:close" class="icon-close"></iconify-icon
+        ></a>
+        <div class="progress-bar">
+          <div class="progress-bar-fill"></div>
+        </div>
+        <div class="lifes">
+          <img src="../../../images/coracao.png" alt="coracao" />
+          <span id="vidas">3</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <link rel="stylesheet" href="../stylem2.css">
+        <div class="md1">
+  <h3>O gato Alonso quer sua ajuda:</h3>
+</div>
+<div class="md2">
+  <div class="boxenun">
+    <img
+      src="../../../images/minigames/pet 1.png"
+      alt="Gato Alonso"
+    />
+    <h3>Eu tenho esse novelo de lã com 110 metros, e ganhei um novelo com <strong>metade</strong> do tamanho desse. Se eu <strong>juntar</strong> os dois, quantos metros eu vou ter no total?</h3>
+
+  </div>
+  <div class="boxresp">
+    <div class="card-block">
+      <div class="card-game">
+         160
+      </div>
+      <div class="card-game">
+         165
+      </div>
+    </div>
+    <div class="card-block">
+      <div class="card-game">
+         155
+      </div>
+      <div class="card-game">
+        170
+      </div>
+    </div>
+  </div>
+</div>
+<div class="md3">
+  <button class="btn-purple">verificar</button>
+</div>
+    </main>
+    <script>
+      const header = document.querySelector("header");
+      const main = document.querySelector("main");
+
+      function adjustMainHeight() {
+        const headerHeight = header.getBoundingClientRect().height;
+        const windowHeight = window.innerHeight;
+        const svh = windowHeight * 0.01;
+        main.style.height = `${100 * svh - headerHeight}px`;
+      }
+
+      window.addEventListener("load", adjustMainHeight);
+      window.addEventListener("resize", adjustMainHeight);
+    </script>
+    <script type="module" src="../js/n4.js"></script>
+  </body>
+</html>

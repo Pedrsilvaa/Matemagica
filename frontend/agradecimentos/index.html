@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Matemágica</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projeto Matemágica" />
+    <meta name="author" content="StepMath" />
+
+    <link rel="icon" type="image/x-icon" href="../images/logo menor.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="theme-color" content="#FBB448" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Página  -->
+    <link rel="stylesheet" type="text/css" href="../primary.css" />
+    <link rel="stylesheet" type="text/css" href="../items.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <body>
+    <header>
+      <div class="hd1">
+        <a href="../"><img src="../images/logo1.png" alt="logo" /></a>
+        <a href="../index.html" class="a-yellow">INÍCIO</a>
+      </div>
+      <div class="hd2">
+        <h2>agradecimentos</h2>
+        <h3>
+          Gostaríamos de agradecer primeiramente a Deus, por ter nos mantido com
+          coragem, forças e vontade para chegar até o final e superar os
+          desafios. Também somos gratos pelas nossas famílias, pois sem elas
+          nada seríamos. Deixamos um agradecimento especial aos nossos
+          orientadores Marco Robson Pereira de Sales e Paulo Henrique Araújo
+          Oliveira, pelo incentivo, suporte, correções e dedicação ao nosso
+          trabalho. Agradecemos a nós mesmos pela dedicação, esforço e
+          persistência em fazer este trabalho dar certo, e a todos os colegas
+          que compartilharam ideias e nos ajudaram. Por fim agradecemos a ETEC
+          de Itaquaquecetuba, e a todos os professores que lecionaram para nós
+          durante estes três anos.
+        </h3>
+        <a class="a-purple" href="#" onclick="history.back()">voltar</a>
+      </div>
+    </header>
+    <footer>
+      <img src="../images/Group 12.png" alt="Group" />
+      <div class="fd1">
+        <div>
+          <h2>Quem somos</h2>
+          <a href="../equipe/">Missão</a>
+          <a href="../equipe/#section2">Equipe</a>
+          <a href=".">Agradecimentos</a>
+        </div>
+        <div>
+          <h2>Redes sociais</h2>
+          <a
+            href="https://www.instagram.com/step.math?igsh=MWN2ZzZ6bTF0ZmZwZg%3D%3D"
+            >Instagram</a
+          >
+        </div>
+        <div>
+          <h2>Guia da marca</h2>
+          <a href="../termos-uso/" target="_blank">Termos de uso </a>
+          <a
+            href="https://etecspgov.sharepoint.com/:b:/r/sites/Section_3046.A.-.M.406.249.20240/Shared%20Documents/Grupo%201%20-%20StepMath/manual%20de%20identidade%20visual%20stepmath.pdf?csf=1&web=1&e=GXtHZS"
+            >Identidade visual</a
+          >
+          <a href="../stepmath/">Stepmath</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function observeSections() {
+        const sections = document.querySelectorAll("header, footer");
+        const body = document.body;
+        const options = {
+          threshold: 0.5,
+        };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (entry.target.tagName === "HEADER") {
+                body.style.backgroundColor = "#fffbff";
+              } else if (entry.target.tagName === "FOOTER") {
+                body.style.backgroundColor = "var(--hard-purple)";
+              }
+            }
+          });
+        }, options);
+
+        sections.forEach((section) => observer.observe(section));
+      }
+      document.addEventListener("DOMContentLoaded", observeSections);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Perfil - Matemágica</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projeto Matemágica" />
+    <meta name="author" content="StepMath" />
+
+    <link rel="icon" type="image/x-icon" href="../../images/logo menor.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="theme-color" content="#FBB448" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--AuthGuard-->
+    <script type="module" src="../../services/authGuard.js"></script>
+
+    <!-- CSS Página  -->
+    <link rel="stylesheet" type="text/css" href="../../primary.css" />
+    <link rel="stylesheet" type="text/css" href="../../items.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <body>
+    <header>
+      <div class="hd1">
+        <h2>Perfil</h2>
+        <div class="hd2">
+          <a href="../menu/" class="a-yellow">VOLTAR</a>
+          <a href="../../configuracao/" class="gear">
+            <iconify-icon icon="ph:gear" class="icon-gear"></iconify-icon
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="md1">
+        <div>
+          <div class="md1d1">
+            <h2>Avatar</h2>
+            <div>
+              <a href="../../modo-casa/avatar/">
+                <div class="circle-dashed">
+                  <img
+                    src="../../../images/lapisedit.png"
+                    alt="lapisedit"
+                    id="replace"
+                  />
+                  <img
+                    class="imgsup"
+                    src="../../images/lapisedit.png"
+                    alt="lapisedit"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="md1d2">
+            <h2 id="userlevel">Nível</h2>
+            <div class="progress-bar">
+              <div class="progress-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <form>
+          <div class="fdiv">
+            <label for="nome"> Nome </label>
+            <input id="nome" type="text" class="gray" disabled value="Nome" />
+          </div>
+
+          <div class="fdiv">
+            <label for="usuario"> Usuário </label>
+            <input
+              id="usuario"
+              type="text"
+              class="gray"
+              disabled
+              value="Username"
+            />
+          </div>
+
+          <div class="fdiv">
+            <label for="email"> Email </label>
+            <input
+              id="email"
+              type="email"
+              class="email"
+              disabled
+              value="email@email.com"
+            />
+          </div>
+
+          <div class="fdiv">
+            <label for="senha"> Senha Atual </label>
+            <div class="fdivsenha">
+              <input
+                id="senha"
+                type="password"
+                class="password"
+                disabled
+                value="senha"
+              />
+              <a href="../../alterar-senha/">alterar senha</a>
+            </div>
+          </div>
+
+          <div class="fdiv">
+            <label for="data-nascimento"> Data de Nascimento </label>
+            <input
+              id="data-nascimento"
+              type="date"
+              class="datanasc"
+              disabled
+              value="2002-02-02"
+            />
+          </div>
+
+          <div class="fbutton">
+            <button class="btn-red" id="btn-red">Excluir conta</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="../../services/userDeleteAcc.js"></script>
+  </body>
+</html>

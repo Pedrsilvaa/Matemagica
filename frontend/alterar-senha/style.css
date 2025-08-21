@@ -1,0 +1,86 @@
+div a {
+  text-decoration: none;
+  color: inherit;
+}
+
+form {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 60vw;
+  gap: 1rem;
+}
+
+.f1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+form h2 {
+  font-weight: 900;
+  font-size: clamp(1rem, -0.25rem + 4vw, 2rem);
+}
+form span {
+  font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--medium-gray);
+}
+
+.f2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30vw;
+}
+
+form input {
+  border-radius: 20px;
+  border: 3px solid var(--light-gray);
+  font-size: clamp(1rem, -0.0938rem + 3.5vw, 1.875rem);
+  padding: 5px 25px;
+  width: 100%;
+  text-overflow: ellipsis;
+  margin: 2.5vh 0;
+}
+
+form input::placeholder {
+  color: #797979;
+  font-weight: 700;
+  font-size: clamp(1rem, -0.0938rem + 3.5vw, 1.875rem);
+}
+
+form input:focus {
+  border-color: var(--text-black);
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #fff inset;
+}
+
+.btn-purple {
+  padding: clamp(6px, 1.5vw, 10px) clamp(12px, 4vw, 30px);
+}
+
+/* Media Query para Celulares/Retrato */
+@media screen and (max-width: 1080px) {
+  form {
+    width: 80vw;
+  }
+  form span {
+    margin: 0vh 0;
+  }
+  form input {
+    margin: 0 0 1.5vh;
+  }
+  .f2 {
+    width: 50vw;
+  }
+}
+.loading {
+  cursor: wait;
+}

@@ -1,0 +1,41 @@
+*{
+    overflow: hidden;
+}
+
+main {
+    height: 100dvh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.md1 {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+}
+.md1 h3 {
+    font-size: clamp(1.75rem, 0.8125rem + 3vw, 2.5rem);
+    font-weight: 900;
+    text-align: center;
+    margin-block: 0;
+    color: #bc4ed8;
+}
+.md1 h4 {
+    font-size: clamp(1rem, 0.2188rem + 2.5vw, 1.625rem);    font-weight: 500;
+    text-align: center;
+    margin-block: 0;
+}
+.md1 button {
+    width: fit-content;
+    margin-top: 1vh;
+    -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.5);
+}
+

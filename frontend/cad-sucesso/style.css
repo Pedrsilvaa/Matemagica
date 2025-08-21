@@ -1,0 +1,68 @@
+div a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.md1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 60vw;
+}
+.md1d1 {
+  margin: 0 0 5vh;
+}
+.md1d1 h2 {
+  font-size: clamp(1.5rem, 0.25rem + 4vw, 2.5rem);
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+  margin-block: 0;
+}
+
+.md1d2 h2 {
+  text-align: center;
+  font-size: clamp(1rem, -0.25rem + 4vw, 2rem);
+  color: var(--hard-purple);
+  margin-block: 0;
+}
+
+.md1d3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 6vh 0 0;
+}
+.btn-purple {
+  width: 40%;
+  margin-bottom: 6vh;
+}
+.md1d3 img {
+  width: 15%;
+}
+
+/* Media Query para Celulares/Paisagem até Laptops */
+@media screen and (max-width: 1080px) {
+  .md1 {
+    width: 90%;
+  }
+  .md1d1,
+  .md1d3 {
+    margin: 3vh 0;
+  }
+}
+
+/* Media Query para Celulares/Retrato */
+@media screen and (pointer: none),
+  (pointer: coarse) and (orientation: portrait) and (max-width: 768px) {
+  .btn-purple {
+    width: 50%;
+  }
+  .md1d3 img {
+    width: 25%;
+    height: auto;
+  }
+}
