@@ -68,8 +68,8 @@ O jogo abrange os seguintes tópicos da matemática básica:
 |--------|------|------------------|
 | 🎯 **Scrum Master** | Enzo Matheus Ferreira Gonçalves | Gerenciamento ágil do projeto |
 | 📊 **Product Owner** | Laura Elis de Ávila Viana | Definição de requisitos e backlog |
-| 💻 **Programador** | Geovanne da Silva Amorim | Desenvolvimento backend/frontend |
-| 💻 **Programador** | Pedro Silvestre da Silva | Desenvolvimento backend/frontend |
+| 💻 **Programador** | Geovanne da Silva Amorim | Desenvolvimento frontend |
+| 💻 **Programador** | Pedro Silvestre da Silva | Desenvolvimento backend |
 | 🎨 **Designer** | Vitória Leyanne Alves de Cristo | UI/UX e identidade visual |
 
 **Orientadores de TCC**: Marco Sales & Paulo Araújo  
